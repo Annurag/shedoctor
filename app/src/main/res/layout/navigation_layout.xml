@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlmain"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rlprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.indglobal.shedoctor.Commans.RoundedImage.RoundedImageView
+                    android:id="@+id/navPrflImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/doc"
+                    ripple:riv_oval="true"
+                    ripple:riv_border_width="1dip"
+                    ripple:riv_border_color="@color/lightGray"
+                    ripple:riv_mutate_background="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/navPrflImg">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvNavDocName"
+                        android:layout_toRightOf="@+id/navPrflImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/lightBlack"
+                        android:text="Dr. Sanjeevini Rao"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvNavDocId"
+                        android:layout_toRightOf="@+id/img"
+                        android:layout_below="@+id/tvdoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="@color/fullGray"
+                        android:text="ID:SHEDCTR2308"
+                        android:layout_marginTop="5dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:id="@+id/tbNavOnline"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/toggle_selector"
+                                android:checked="false"
+                                android:enabled="false"
+                                android:clickable="true"
+                                android:text=""
+                                android:textOff=""
+                                android:textOn=""/>
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvNavOnline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/fullGray"
+                                android:textSize="12dp"
+                                android:text="You are Offline"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                       <LinearLayout
+                           android:id="@+id/Navlltoggle"
+                           android:layout_width="wrap_content"
+                           android:layout_height="25dp"
+                           android:orientation="horizontal">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:textColor="@android:color/transparent"
+                            android:textSize="12dp"
+                            android:text="You are Offline"
+                            android:layout_gravity="center_vertical"/>
+
+                           <ProgressBar
+                               android:id="@+id/NavprgLoading"
+                               android:layout_width="20dp"
+                               android:layout_height="20dp"
+                               android:layout_centerInParent="true"
+                               android:visibility="gone"
+                               android:layout_marginLeft="5dp"
+                               android:indeterminateDrawable="@drawable/progress_bar"/>
+
+
+                       </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            ripple:rv_color="@color/colorPrimaryDark"
+            android:id="@+id/ivNavCross"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            ripple:rv_centered="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cross"
+                android:padding="12dp"/>
+
+         </com.indglobal.shedoctor.Commans.RippleView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Manage"
+                android:textSize="14dp"
+                android:textColor="@color/lightBlack"
+                android:background="@color/lightGray"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"/>
+
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/navConsulTime"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Consultation Time and Fee"
+                    android:textSize="12dp"
+                    android:textColor="@color/fullGray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/docsignature"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Doctor Signature"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/addreceptionist"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Receptionists"
+                    android:textSize="12dp"
+                    android:textColor="@color/fullGray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/healthtips"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Health Tips"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Payment"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/lightBlack"
+                android:background="@color/lightGray"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"/>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/ledger"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ledger"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/payment"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Payment"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+             </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/bankdetails"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bank Details"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"/>
+
+             </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Others"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/lightBlack"
+                android:background="@color/lightGray"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"/>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Feedback"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Settings"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rpllogout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Logout"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp" />
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

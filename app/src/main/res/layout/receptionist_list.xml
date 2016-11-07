@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receptionists"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_marginTop="2dp">
+
+        <LinearLayout
+            android:id="@+id/llRcptn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/receptionist"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receptionist Name"
+                    android:textSize="10sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginTop="10dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvReceptnistName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:text="Amit yadav"
+                    android:layout_marginTop="2dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receptionist Email"
+                    android:textSize="10sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginTop="10dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvReceptnistEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:text="yadavji006@gmail.com"
+                    android:layout_marginTop="2dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <com.indglobal.shedoctor.Commans.RippleView
+                        android:id="@+id/rplReceptnistEdit"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        ripple:rv_centered="true"
+                        ripple:rv_color="@color/white">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rect_submit_fill"
+                            android:textColor="@color/white"
+                            android:text="Edit"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                    </com.indglobal.shedoctor.Commans.RippleView>
+
+                    <com.indglobal.shedoctor.Commans.RippleView
+                        android:id="@+id/rplReceptnistRemove"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        ripple:rv_centered="true"
+                        ripple:rv_color="@color/colorPrimary"
+                        android:layout_marginLeft="10dp">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rect_cancel_fill"
+                            android:textColor="@color/lightBlack"
+                            android:text="Remove"
+                            android:gravity="center"
+                            android:textSize="13dp"/>
+
+                    </com.indglobal.shedoctor.Commans.RippleView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_bottom_shadow"
+            android:layout_below="@+id/llRcptn"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llMainNoReceptionist"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/receptionist"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Receptionist Added"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rpladdreceptionist"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            ripple:rv_color="@color/white"
+            ripple:rv_centered="true">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Add Receptionist"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/rect_submit_fill"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Receptionist can manage doctor appointments.\nThey can enable/disable appointments slots too"
+            android:textSize="12sp"
+            android:textColor="@color/darkGray"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+
+</RelativeLayout>

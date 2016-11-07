@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/tvUpcmgApntvideocall"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/videocall"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/line1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@color/lightGray"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/clock"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvUpcmgLstItmTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:15 pm"
+                        android:textColor="@color/fullGray"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvUpcmgLstItmDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30th july 2015"
+                    android:textColor="@color/fullGray"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/line2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@color/lightGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvpatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient"
+                    android:textColor="@color/fullGray"
+                    android:textSize="10dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvUpcmgLstItmName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chandrika P"
+                    android:textColor="@color/lightBlack"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:textSize="14dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvUpcmgLstItmId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient ID:SHDCTRFR1234"
+                    android:textColor="@color/fullGray"
+                    android:textSize="11dp"
+                    android:layout_marginTop="2dp"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:id="@+id/tvUpcmgLstItmStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Call starts in 2days 30 mins"
+            android:textColor="@color/fullGray"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="160dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplupcmngapointitem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                card_view:rv_centered="true"
+                card_view:rv_color="@color/colorPrimary"
+                android:layout_centerHorizontal="true"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

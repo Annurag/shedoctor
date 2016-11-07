@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Tips"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"/>
+
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplwritenew"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:rv_centered="true"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Write New"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:gravity="center"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:background="@color/newLightGray">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvHealthList"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/upcmng_apoin_list_item"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlNoRecentHealthtips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/health_tips"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Health Tips"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"/>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rpladdHealthtips"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                app:rv_centered="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Write A New Health Tip"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@drawable/rect_submit_fill"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

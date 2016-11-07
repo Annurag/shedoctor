@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/fdbktoolbar"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/ivfeedbackBack"
+            android:layout_width="55dp"
+            android:gravity="center"
+            app:rv_centered="true"
+            android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:padding="10dp"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/fdbktoolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Topic"
+            android:textSize="12sp"
+            android:layout_marginTop="30dp" />
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="12sp"
+            android:hint="Services Offered"
+            android:textCursorDrawable="@null"
+            android:textColorHint="@color/darkGray"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Rating"
+            android:textSize="12sp"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_pink" />
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poor"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_pink"
+                    android:layout_marginLeft="3dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liked"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_pink" />
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_black" />
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_black" />
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your feedback"
+            android:layout_marginTop="40dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Type your feedback"
+            android:textColorHint="@color/darkGray"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:background="@color/lightGray"
+            android:textSize="12sp"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/lightBlack"
+            android:gravity="start"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvmypnext"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Next"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_submit_fill"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

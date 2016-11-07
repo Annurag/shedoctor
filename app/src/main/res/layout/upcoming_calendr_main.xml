@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Appointment"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+    <LinearLayout
+        android:id="@+id/llMainCalendr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/newLightGray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" >
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplClndrapointBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ivClndrapointBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/left_arrow_light"
+                    android:padding="10dp"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvClndrapointDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dip"
+                android:textColor="@color/fullGray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplClndrapointNxt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ivClndrapointNxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right_arrow_light"
+                    android:padding="10dp"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/lightGray">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="S"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="M"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="T"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="W"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="T"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="F"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="S"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/newLightGray"
+            android:visibility="visible">
+
+            <GridView
+                android:id="@+id/grdClndrapoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:verticalSpacing="1dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="7"
+                android:layout_marginBottom="1dp"
+                android:focusableInTouchMode="true"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.indglobal.shedoctor.Fonts.GouthamBookText
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:text="Somethiing going wrong check your internet connection!"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

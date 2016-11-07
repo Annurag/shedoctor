@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medicine Name"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="Audgfuhirjeo fyrge8y hcuirhesi"
+                            android:maxLines="3"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medicine Type"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="Tablet"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Morning"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemMrng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="After Food"
+                            android:maxLines="1"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Afternoon"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemAftr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="Before Food"
+                            android:maxLines="1"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Evening"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemEvng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="After Food"
+                            android:maxLines="1"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Night"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMedcnListItemNght"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="Before Food"
+                            android:maxLines="1"
+                            android:textSize="13sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notes"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMedcnListItemNots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="Not Available"
+                        android:maxLines="3"
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

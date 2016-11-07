@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/llchangepwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="70dp">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Login Details"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="18dp"
+                android:textSize="14sp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etSettingsEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/lightBlack"
+                android:paddingLeft="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:maxLength="35"
+                android:ems="10"
+                android:layout_marginTop="15dp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etSettingsMobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/lightBlack"
+                android:paddingLeft="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:ems="10"
+                android:layout_marginTop="15dp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etSettingsNewPswd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/lightBlack"
+                android:paddingLeft="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:ems="10"
+                android:layout_marginTop="20dp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etSettingsConfirmPswd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/lightBlack"
+                android:paddingLeft="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:ems="10"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lldeactivate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="70dp"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deactivate your Shedoctr Account"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tell us why you Deactivating your Account?"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/darkGray"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/lightGray"
+                android:layout_marginTop="10dp"
+                android:gravity="start"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Are you sure you want to deactivate your account?"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/darkGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lightGray"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp">
+
+                <com.indglobal.shedoctor.Commans.RippleView
+                    android:id="@+id/rplChangePassword"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    ripple:rv_centered="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Change Password"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/rect_submit_fill"/>
+
+                </com.indglobal.shedoctor.Commans.RippleView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp">
+
+                <com.indglobal.shedoctor.Commans.RippleView
+                    android:id="@+id/rplSettingsCancel"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    ripple:rv_centered="true"
+                    ripple:rv_color="@color/WhiteSmoke"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rect_cancel_fill"/>
+
+                </com.indglobal.shedoctor.Commans.RippleView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

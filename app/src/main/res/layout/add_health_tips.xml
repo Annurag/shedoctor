@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvAddHealthTitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Add Home Tips"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"
+        android:layout_below="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health tips Title"
+                android:textSize="12sp"
+                android:textColor="@color/fullGray"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etAddHealthTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:padding="10dp"
+                android:textColor="@color/lightBlack"
+                android:gravity="start"/>
+
+            <ImageView
+                android:id="@+id/ivAddHealthImgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"/>
+
+            <RelativeLayout
+                android:id="@+id/rlAddHealthImgUpload"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_grayfill_stroke">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/camera"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Image"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="7dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+                android:id="@+id/etAddHealthContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@drawable/indicator_black"
+                android:minHeight="80dp"
+                android:textColor="@color/lightBlack"
+                android:hint="Write your Tips"
+                android:ems="10"
+                android:gravity="start"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:background="@drawable/rect_grayfill_stroke"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightGray"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplAddHealthPublish"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvAddHealthPublish"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Publish"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/rect_submit_fill"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplAddHealthCancel"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rect_cancel_fill"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSelectMain"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_bottom_shadow"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select from"
+            android:textColor="@color/fullGray"
+            android:layout_margin="15dp"
+            android:textSize="14sp"/>
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/ivUploadDocAnimCross"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            ripple:rv_centered="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_margin="2dp">
+
+            <ImageView
+                android:src="@drawable/cross"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="13dp"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/llGallery"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/gallery"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gallery"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/fullGray"/>
+
+                </LinearLayout>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/llCamera"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_marginLeft="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/camera"
+                        android:layout_marginTop="20dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/fullGray"/>
+
+                </LinearLayout>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

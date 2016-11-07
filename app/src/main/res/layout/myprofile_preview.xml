@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rltoolbr"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="My Profile Preview"
+            android:layout_centerInParent="true"/>
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rplcross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            ripple:rv_centered="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cross_white"
+                android:layout_marginRight="15dp"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/rltoolbr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/diagtitle"
+        android:background="@color/lightGray">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:textColor="@color/lightBlack"
+            android:text="Basic Info"
+            android:textSize="13sp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:id="@+id/tveditdiagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Edit"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="@color/lightblue"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:id="@+id/imgcircle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/oval_fill"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp" />
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/imgcircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr.Sanjiveeni Rao"
+                android:textSize="14sp"
+                android:textColor="@color/lightBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="MBBS MD in Dentist"
+                android:textSize="12sp"
+                android:textColor="@color/fullGray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="875674 Tamilnadu Medical Council,2004"
+                android:singleLine="true"
+                android:textColor="@color/fullGray"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 yrs Experience"
+                android:singleLine="true"
+                android:textColor="@color/fullGray"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language:Telgu,Hindi,Marathi,English \n Mother Tounge:Telgu"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bengaluru-560021,Karnataka,India"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping changing your toothbrush is vital your oral"
+            android:textSize="13sp"
+            android:maxLines="3"
+            android:padding="15dp"
+            android:textColor="@color/fullGray"
+            android:ellipsize="end"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/lightGray">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textColor="@color/lightBlack"
+                android:text="Education"
+                android:textSize="13sp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Edit"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/lightblue"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/lightGray">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textColor="@color/lightBlack"
+                android:text="Specialization"
+                android:textSize="13sp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Edit"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/lightblue"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="10dp"
+            android:text="Specialization"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="10dp"
+            android:text="Service"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Dermatology"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:paddingLeft="15dp"/>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/lightGray">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textColor="@color/lightBlack"
+                android:text="Awards &amp; Certification"
+                android:textSize="13sp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Edit"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/lightblue"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="10dp"
+            android:text="Awards"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="10dp"
+            android:text="Certificates"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PH.D(Hospital Administration)CVB University,USA, 1995"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/fullGray"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true">
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rplconfirm"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            ripple:rv_centered="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Confirm &amp; send"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:background="@drawable/rect_submit_fill"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

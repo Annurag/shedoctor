@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rlhealthtips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Commans.RoundedImage.RoundedImageView
+                android:id="@+id/ivHealtListItemPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                card_view:riv_corner_radius="5dp"
+                card_view:riv_oval="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/ivHealtListItemPic"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvHealtListItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keep your teeth strong and healthy As you get older"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:textColor="@color/lightBlack"/>
+
+
+                <com.indglobal.shedoctor.Fonts.GouthamLightText
+                    android:id="@+id/tvHealtListItemContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping"
+                    android:textSize="11sp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:textColor="@color/darkGray"/>
+
+
+                <com.indglobal.shedoctor.Fonts.GouthamLightText
+                    android:id="@+id/tvHealtListItemStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status:- Pending Approval"
+                    android:textSize="10sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/lightblue"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.indglobal.shedoctor.Commans.RippleView
+                    android:id="@+id/rplHealtListItemClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    card_view:rv_centered="true"
+                    card_view:rv_color="@color/colorPrimary"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+</android.support.v7.widget.CardView>

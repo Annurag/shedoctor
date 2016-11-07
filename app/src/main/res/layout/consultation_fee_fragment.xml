@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlMainFrg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llconfees"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll1confees"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/video_call"
+                    android:background="@drawable/oval_fill"
+                    android:layout_marginTop="15dp"
+                    android:padding="15dp"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rect_gray_stroke"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/rupee"
+                        android:padding="8dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/rect_grayfill_stroke" />
+
+                    <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+                        android:id="@+id/etConsltFeeFragVideoPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/enter_amount_text"
+                        android:textColor="@color/lightBlack"
+                        android:layout_gravity="center_vertical"
+                        android:textCursorDrawable="@drawable/indicator"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColorHint="@color/fullGray"
+                        android:textSize="12dp"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+
+                <com.indglobal.shedoctor.Fonts.CheckBold
+                    android:id="@+id/cbConsltFeeFragVideoAvailbl"
+                    android:textColor="@color/fullGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_text"
+                    android:textSize="12dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll2confees"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/phone_call"
+                    android:background="@drawable/oval_fill"
+                    android:padding="20dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rect_gray_stroke"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/rupee"
+                        android:padding="8dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/rect_grayfill_stroke" />
+
+                    <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+                        android:id="@+id/etConsltFeeFragAudioPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/enter_amount_text"
+                        android:textColor="@color/lightBlack"
+                        android:layout_gravity="center_vertical"
+                        android:textCursorDrawable="@drawable/indicator"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColorHint="@color/fullGray"
+                        android:textSize="12dp"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+
+                <com.indglobal.shedoctor.Fonts.CheckBold
+                    android:id="@+id/cbConsltFeeFragAudioAvailbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_text"
+                    android:textColor="@color/fullGray"
+                    android:textSize="12dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGray"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <com.indglobal.shedoctor.Commans.RippleView
+                    android:id="@+id/rplConsltFeeFragUpdate"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    ripple:rv_centered="true"
+                    ripple:rv_color="@color/white">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvupdate"
+                        android:gravity="center"
+                        android:background="@drawable/rect_submit_fill"
+                        android:text="@string/update_text"
+                        android:textSize="15dp"
+                        android:textColor="@color/white" />
+                </com.indglobal.shedoctor.Commans.RippleView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

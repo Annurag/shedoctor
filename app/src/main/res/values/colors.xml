@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EB7D98</color>
+    <color name="colorPrimaryDark">#e34f74</color>
+    <color name="colorAccent">#A54C66</color>
+
+    <color name="fbBlue">#1B75BB</color>
+    <color name="gray">#FFB2B3B6</color>
+    <color name="liggray">#e6e6e6</color>
+    <color name="creamWhite">#f2f2f2</color>
+    <color name="darkGray">#A7A9AB</color>
+    <color name="fullGray">#FF89898B</color>
+    <color name="lightBlack">#231f20</color>
+    <color name="graywhite">#d9d9d9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#D91B5B</color>
+    <color name="Whitetrans">#80F5F5F5</color>
+    <color name="lightblue">#43B5FF</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
+    <color name="transparentBlue">#ECF7FB</color>
+    <color name="green">#8dc642</color>
+    <color name="transpancyBlack">#00000066</color>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="tabunselect">#ffcccc</color>
+    <color name="lightGray">#ececec</color>
+    <color name="yellow">#F5C761</color>
+    <color name="newLightGray">#f1f2f2</color>
+
+</resources>

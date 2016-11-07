@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Topic"
+            android:textSize="12sp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/fullGray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rect_grayfill_stroke">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/down"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Spinner
+                android:id="@+id/spinFeedbackrsn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Rating"
+            android:textSize="12sp"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="25dp"/>
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:max="5"
+            android:rating="1"
+            android:isIndicator="false"
+            android:progressDrawable="@drawable/ratingbar_shape"/>
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your feedback"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="15dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:id="@+id/typefeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your feedback"
+            android:minHeight="80dp"
+            android:maxHeight="150dp"
+            android:textColorHint="@color/darkGray"
+            android:padding="10dp"
+            android:background="@drawable/rect_grayfill_stroke"
+            android:textSize="12sp"
+            android:textCursorDrawable="@drawable/indicator_black"
+            android:textColor="@color/lightBlack"
+            android:gravity="start"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/newLightGray"
+        android:layout_alignParentBottom="true">
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rplNext"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            app:rv_centered="true"
+            app:rv_color="@color/Whitetrans"
+            android:layout_centerInParent="true">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvmypnext"
+                android:gravity="center"
+                android:text="Next"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_submit_fill"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:orientation="vertical"
+    android:id="@+id/llmain">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Showing all Notification"
+            android:textSize="14sp"
+            android:textColor="@color/fullGray"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear All"
+            android:textSize="14sp"
+            android:textColor="@color/darkGray"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgcircle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/oval_fill"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/imgcircle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sushma jain"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="14sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_marginTop="10dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" has booked video call at"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="13sp"
+                        android:textColor="@color/darkGray"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:30pm, on 09/May/2016"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkGray"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 mins ago"
+                    android:singleLine="true"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginTop="15dp"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/cross_white"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

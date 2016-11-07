@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMainFrg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/left_arrow_light"
+                    android:padding="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today, 16 jun 2016"
+                    android:textSize="12dp"
+                    android:textColor="@color/lightBlack"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="40dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/consulcal"
+                    android:src="@drawable/calendar_unselected"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_light"
+                    android:layout_toLeftOf="@id/consulcal"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/liggray"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@color/lightGray"
+                android:weightSum="4">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvMorning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:text="@string/morning"
+                    android:layout_weight="1"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvAfterNoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12sp"
+                    android:text="@string/afternoon"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvEvening"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12sp"
+                    android:text="@string/evening"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvNight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:text="@string/night"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/liggray"/>
+
+            <!--<LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_grayfill_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="8dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_grayfill_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_grayfill_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="8dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="8dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:00 AM"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="8dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/rect_gray_stroke"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/fullGray"
+                        android:text="6:00 AM"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textColor="@color/white"
+                        android:text="6:15 AM"
+                        android:layout_marginLeft="8dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                        android:id="@+id/gvCnsltTimeView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:horizontalSpacing="5dp"
+                        android:numColumns="4"
+                        android:layout_margin="5dp"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp"
+                        android:layout_marginBottom="70dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select None"
+                            android:id="@+id/cbSelectNone"
+                            android:background="@drawable/rect_submit_fill"
+                            android:textSize="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cbRepeatDays"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Repeat for all days"
+                            android:background="@drawable/rect_submit_fill"
+                            android:textSize="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"/>
+
+                    </LinearLayout>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_whole_day"
+                        android:id="@+id/cbSelectWholeDay"
+                        android:background="@drawable/rect_submit_fill"
+                        android:textSize="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGray"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <com.indglobal.shedoctor.Commans.RippleView
+                    android:id="@+id/rplConsltFeeFragUpdate"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    ripple:rv_centered="true"
+                    ripple:rv_color="@color/white">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvupdate"
+                        android:gravity="center"
+                        android:background="@drawable/rect_submit_fill"
+                        android:text="Update"
+                        android:textSize="15dp"
+                        android:textColor="@color/white" />
+
+                </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+
+
+</RelativeLayout>

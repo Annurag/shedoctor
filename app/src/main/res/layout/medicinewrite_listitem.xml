@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine Name"
+            android:textColor="@color/fullGray"
+            android:textSize="12sp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:id="@+id/etmedicineName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/rect_grayfill_stroke"
+            android:hint=" Ex Paracetamol"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textCursorDrawable="@drawable/indicator_black"
+            android:textColorHint="@color/fullGray"
+            android:textColor="@color/lightBlack"
+            android:layout_marginTop="5dp"/>
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine Type"
+            android:textColor="@color/fullGray"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlMedicineType"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/rect_grayfill_stroke"
+            android:layout_marginTop="5dp">
+
+            <Spinner
+                android:id="@+id/spinMedicineType"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Tablet"
+                android:textSize="14sp"
+                android:textColor="@color/lightBlack"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/down"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning"
+                    android:textSize="12sp"
+                    android:textColor="@color/fullGray" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMorningtab"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rect_grayfill_stroke"
+                    android:layout_marginTop="5dp">
+
+                    <Spinner
+                        android:id="@+id/spinMorning"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Tablet"
+                        android:textSize="14sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/down"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="After noon"
+                    android:textSize="12sp"
+                    android:textColor="@color/fullGray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAfternoontab"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rect_grayfill_stroke"
+                    android:layout_marginTop="5dp">
+
+                    <Spinner
+                        android:id="@+id/spinAftrnon"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Tablet"
+                        android:textSize="14sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/down"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evening"
+                    android:textSize="12sp"
+                    android:textColor="@color/fullGray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlEveningtab"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rect_grayfill_stroke"
+                    android:layout_marginTop="5dp">
+
+                    <Spinner
+                        android:id="@+id/spinEvng"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Tablet"
+                        android:textSize="14sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/down"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Night"
+                    android:textSize="12sp"
+                    android:textColor="@color/fullGray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlNighttab"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rect_grayfill_stroke"
+                    android:layout_marginTop="5dp">
+
+                    <Spinner
+                        android:id="@+id/spinNght"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Tablet"
+                        android:textSize="14sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/down"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:id="@+id/etAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add note"
+            android:textSize="12sp"
+            android:textColorHint="@color/fullGray"
+            android:gravity="start"
+            android:minHeight="80dp"
+            android:textCursorDrawable="@drawable/indicator_black"
+            android:padding="8dp"
+            android:background="@drawable/rect_grayfill_stroke"
+            android:textColor="@color/lightBlack"
+            android:layout_marginTop="10dp"/>
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rplRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/rect_submit_fill"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>

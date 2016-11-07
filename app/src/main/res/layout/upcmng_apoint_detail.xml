@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightGray">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Info"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llmain"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvpatient"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Patient"
+                                android:textColor="@color/fullGray"
+                                android:textSize="10dp"/>
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvUpApntDtlPName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chandrika P"
+                                android:textColor="@color/lightBlack"
+                                android:layout_marginTop="3dp"
+                                android:textSize="14sp"/>
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvUpApntDtlPId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/fullGray"
+                                android:textSize="11sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1">
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvUpApntDtlCallStartIn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Call starts in 49 seconds"
+                                android:textColor="@color/fullGray"
+                                android:textSize="11sp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/ivUpApntDtlPCallIcon"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/videocall"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                    android:id="@+id/tvUpApntDtlPCallType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Video Call"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="2dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/clock"/>
+
+                                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                    android:id="@+id/tvUpApntDtlPTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="6:15 pm"
+                                    android:textColor="@color/fullGray"
+                                    android:textSize="12sp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"/>
+
+                            </LinearLayout>
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvUpApntDtlPDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="30th july 2015"
+                                android:textColor="@color/fullGray"
+                                android:layout_marginTop="2dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="4dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_below="@+id/llmain"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/lightGray"
+                android:id="@+id/tvline"/>
+
+            <LinearLayout
+                android:layout_below="@+id/tvline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Height"
+                            android:textSize="10sp"
+                            android:textColor="@color/lightBlack"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvUpApntDtlPHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="5.7inch"
+                            android:textSize="14sp"
+                            android:textColor="@color/lightBlack"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            android:gravity="center">
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weight"
+                                android:textSize="10sp"
+                                android:textColor="@color/lightBlack"/>
+
+                            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                                android:id="@+id/tvUpApntDtlPWeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="65 kg"
+                                android:textSize="14sp"
+                                android:textColor="@color/lightBlack"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightGray"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blood Group"
+                            android:textSize="10sp"
+                            android:textColor="@color/lightBlack"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvUpApntDtlPBlood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="B '+'"
+                            android:textSize="14sp"
+                            android:textColor="@color/lightBlack"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prescription"
+                        android:textSize="12sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvUpApntDtlPrescriptionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvUpApntDtlPrescrptn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Prescription Available"
+                    android:textSize="11sp"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/fullGray"
+                    android:minHeight="60dp"
+                    android:gravity="center_vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lab reports"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="12dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvUpApntDtlPLabCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="12sp"
+                        android:textColor="@color/lightBlack"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:orientation="vertical">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvUpApntDtlLabNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Reports Available"
+                        android:textSize="11sp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/fullGray"
+                        android:minHeight="60dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"/>
+
+                    <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                        android:id="@+id/grdUpApntDtlLabReports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:horizontalSpacing="10dp"
+                        android:verticalSpacing="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="Allergies"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="12sp"
+                    android:background="@color/lightGray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvUpApntDtlPAllergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/lightBlack"
+                    android:text="asdfghjklmnvczx qwe rty cvbn asdfg"
+                    android:textSize="12sp"
+                    android:minHeight="50dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/ivUpApntDtlPCallbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/call_unslctd"
+                    android:padding="10dp"
+                    android:background="@drawable/oval_fill_white"
+                    android:layout_gravity="center_horizontal"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:textSize="13sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/lightBlack"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplUpApntDtlPCancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cancel_slctd"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/oval_fill_white"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/lightBlack"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

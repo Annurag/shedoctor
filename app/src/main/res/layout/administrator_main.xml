@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logos"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="The world's first women centric \n online medical video consultation platform"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/fullGray"
+            android:gravity="center_horizontal"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp">
+
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvSignIn"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textSize="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:textColor="@color/lightBlack" />
+
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvSignUp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:paddingTop="5dp"
+                android:textSize="15dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:textColor="@color/fullGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvBackSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"/>
+
+
+            <TextView
+                android:id="@+id/tvBackSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/llSignIn"
+        android:layout_below="@+id/linear"
+        android:visibility="visible">
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etLoginUsername"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Email id / Mobile number"
+            android:textColor="@color/fullGray"
+            android:textColorHint="@color/darkGray"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@drawable/indicator"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etLoginPass"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColorHint="@color/darkGray"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="35dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:background="@android:color/transparent"
+            android:textCursorDrawable="@drawable/indicator"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/fullGray"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="5dp"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/tvLoginNext"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            ripple:rv_centered="true"
+            android:gravity="center"
+            android:layout_marginTop="65dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:text="SIGN IN"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@drawable/rect_submit_fill"
+            android:textColor="@color/white"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:id="@+id/linear1">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By logging in you agree to our"
+                android:textColor="@color/fullGray"
+                android:textSize="10dp"
+                android:id="@+id/txtvw"/>
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" T&amp;C "
+                android:textColor="@color/lightblue"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/txtvw"
+                android:id="@+id/txt1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" and "
+                android:textColor="@color/fullGray"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/txt1"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textColor="@color/lightblue"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/txt2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/linear"
+        android:visibility="gone">
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etSignUpUserName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textColor="@color/fullGray"
+            android:textColorHint="@color/darkGray"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@drawable/indicator"
+            android:inputType="textPersonName"
+            android:maxLength="35"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etSignUpMobile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Mobile number"
+            android:textColor="@color/fullGray"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@drawable/indicator"
+            android:maxLength="10"
+            android:textColorHint="@color/darkGray"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etSignUpEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Email id"
+            android:textColor="@color/fullGray"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@drawable/indicator"
+            android:maxLength="40"
+            android:textColorHint="@color/darkGray"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etSignUpRegistrno"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Medical Registration Number"
+            android:textColor="@color/fullGray"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@drawable/indicator"
+            android:maxLength="30"
+            android:textColorHint="@color/darkGray"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamLightEdit
+            android:id="@+id/etSignUpPass"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/fullGray"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:maxLength="30"
+            android:textCursorDrawable="@drawable/indicator"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:textColorHint="@color/darkGray"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/tvSignUpNext"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            ripple:rv_centered="true"
+            android:gravity="center"
+            android:layout_marginTop="35dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sign Up"
+            android:background="@drawable/rect_submit_fill"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If you have already SignUp?"
+                android:textColor="@color/fullGray"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvSignupBackSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignIn !"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:id="@+id/tvsuccessful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank You!"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/lightBlack"/>
+
+        <RadioGroup
+            android:id="@+id/rgPendingStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal">
+
+            <com.indglobal.shedoctor.Fonts.RadioGoutam
+                android:id="@+id/rdsuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Successful"
+                android:textSize="13sp"
+                android:checked="true"
+                style="@style/MyRadioButton"
+                android:textColor="@color/radio_color_selector"/>
+
+            <com.indglobal.shedoctor.Fonts.RadioGoutam
+                android:id="@+id/rdunsuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unsuccessful"
+                style="@style/MyRadioButton"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/radio_color_selector"/>
+
+            <com.indglobal.shedoctor.Fonts.RadioGoutam
+                android:id="@+id/rdnoshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Show"
+                style="@style/MyRadioButton"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/radio_color_selector"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llsuccessful"
+        android:layout_below="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginBottom="70dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your video call had successfully completed"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/lightBlack"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/complete_large"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llmain"
+        android:id="@+id/llunsuccessful"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="70dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the reason for your unsuccessful \n call,will help us to improve our service"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="11sp"
+            android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rect_grayfill_stroke">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dropdown"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Spinner
+                android:id="@+id/spinPendingUnscs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+
+    <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+        android:id="@+id/etPendingReason"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Write exact reason"
+        android:gravity="start"
+        android:background="@drawable/rect_grayfill_stroke"
+        android:textColorHint="@color/fullGray"
+        android:textSize="12sp"
+        android:textColor="@color/lightBlack"
+        android:padding="8dp"
+        android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llmain"
+        android:id="@+id/llnoshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the reason for your unsuccessful \n call,will help us to improve our service"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="11sp"
+            android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rect_grayfill_stroke">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dropdown"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Spinner
+                android:id="@+id/spinPendingNotnw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true">
+
+        <com.indglobal.shedoctor.Commans.RippleView
+            android:id="@+id/rplPrescription"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            app:rv_centered="true"
+            app:rv_color="@color/Whitetrans"
+            android:layout_centerInParent="true">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvPendngStatsText"
+                android:gravity="center"
+                android:text="Write Prescription"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_submit_fill"/>
+
+        </com.indglobal.shedoctor.Commans.RippleView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

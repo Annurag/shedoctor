@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">SheDoctor</string>
+    <string name="action_settings">Calendar</string>
+
+    <string name="upldConfirm">Your Documents sent successfully for verification\n SheDoctr team will verify documents and send\n confirmation
+    message to your\n mail/mobile number in 48 hours.</string>
+
+    <string name="signinUrl">https://beta.hedoctr.com/v1/authenticate/login</string>
+    <string name="signupUrl">https://beta.hedoctr.com/v1/authenticate/register</string>
+    <string name="uploaddocUrl">https://beta.hedoctr.com/v1/doctor/documents</string>
+    <string name="shortPrflUrl">https://beta.hedoctr.com/v1/doctor/shortProfile</string>
+    <string name="statusToggleUrl">https://beta.hedoctr.com/v1/doctor/statusToggle</string>
+    <string name="langUrl">https://beta.hedoctr.com/v1/getLanguages</string>
+    <string name="prflUrl">https://beta.hedoctr.com/v1/doctor/profile</string>
+    <string name="uploadimgUrl">https://beta.hedoctr.com/v1/doctor/changeProfilePic</string>
+    <string name="specltyurl">https://beta.hedoctr.com/v1/getSpecialties</string>
+    <string name="medcntypeUrl">https://beta.hedoctr.com/v1/getMedicineType</string>
+    <string name="upcmngapoinUrl">https://beta.hedoctr.com/v1/doctor/upcomingAppointments</string>
+    <string name="canclApointUrl">https://beta.hedoctr.com/v1/doctor/cancelAppointment</string>
+    <string name="consltFee">https://beta.hedoctr.com/v1/doctor/consultationFees</string>
+    <string name="doctrSignatureurl">https://beta.hedoctr.com/v1/doctor/signature</string>
+    <string name="receptionistUrl">https://beta.hedoctr.com/v1/doctor/receptionist</string>
+    <string name="pastapointUrl">https://beta.hedoctr.com/v1/doctor/pastAppointments</string>
+    <string name="healthtipsUrl">https://beta.hedoctr.com/v1/doctor/healthTips</string>
+    <string name="bankDetailUrl">https://beta.hedoctr.com/v1/doctor/bankDetails</string>
+    <string name="updthealthtipsUrl">https://beta.hedoctr.com/v1/doctor/updateHealthTips</string>
+    <string name="bankdtlUrl">https://beta.hedoctr.com/v1/doctor/bankDetails</string>
+    <string name="getBanksUrl">https://beta.hedoctr.com/v1/getBanks</string>
+    <string name="feedbkUrl">https://beta.hedoctr.com/v1/doctor/feedback</string>
+    <string name="chamgLoginStngUrl">https://beta.hedoctr.com/v1/doctor/loginDetails</string>
+    <string name="getPrscrptnUrl">https://beta.hedoctr.com/v1/doctor/prescription</string>
+    <string name="ledgerUrl">https://beta.hedoctr.com/v1/doctor/ledger</string>
+    <string name="paymentUrl">https://beta.hedoctr.com/v1/doctor/payments</string>
+    <string name="pendingUrl">https://beta.hedoctr.com/v1/doctor/callStatus</string>
+    <string name="apntDateUrl">https://beta.hedoctr.com/v1/doctor/appointmentByDate</string>
+    <string name="fotgtPassUrl">https://beta.hedoctr.com/v1/authenticate/forgot-password</string>
+    <string name="resetPassUrl">https://beta.hedoctr.com/v1/authenticate/reset-password</string>
+    <string name="resendUrl">https://beta.hedoctr.com/v1/authenticate/resend-code</string>
+    <string name="writlabTstUrl">https://beta.hedoctr.com/v1/getLabTestsList</string>
+    <string name="getDocPatntDtlUrl">https://beta.hedoctr.com/v1/doctor/appointmentDoctorPatientDetails</string>
+    <string name="canclapointUrl">https://beta.hedoctr.com/v1/doctor/otherAppointments</string>
+    <string name="consultationTime" >https://beta.hedoctr.com/v1/doctor/consultationTime</string>
+
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="update_text">Update</string>
+    <string name="available_text">Available</string>
+    <string name="enter_amount_text">Enter Amount</string>
+    <string name="select_whole_day">Select All For Whole Day</string>
+
+
+    <string-array name="state">
+        <item>Andhra Pradesh</item>
+        <item>Andaman and Nicobar Islands</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar	</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana	</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="prefx_array">
+        <item>Dr.</item>
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+    </string-array>
+
+    <string-array name="reason_array">
+        <item>Reason 1</item>
+        <item>Reason 2</item>
+        <item>Reason 3</item>
+    </string-array>
+
+    <string-array name="type_array">
+        <item>All</item>
+        <item>Voice</item>
+        <item>Video</item>
+    </string-array>
+
+    <string-array name="unsuccess_reason">
+        <item>Select Reason</item>
+        <item>Network Issue</item>
+        <item>Internet Slow</item>
+    </string-array>
+
+    <string-array name="not_show">
+        <item>Select</item>
+        <item>Patient</item>
+        <item>Doctor</item>
+    </string-array>
+
+    <string-array name="medicin_type">
+        <item>Tablet</item>
+        <item>Syrup</item>
+        <item>Capsule</item>
+    </string-array>
+
+    <string-array name="medicin_time">
+        <item>-</item>
+        <item>After Food</item>
+        <item>Before Food</item>
+    </string-array>
+
+    <string-array name="years_array">
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+        <item>1999</item>
+        <item>1998</item>
+        <item>1997</item>
+        <item>1996</item>
+        <item>1995</item>
+        <item>1994</item>
+        <item>1993</item>
+        <item>1992</item>
+        <item>1991</item>
+        <item>1990</item>
+        <item>1989</item>
+        <item>1988</item>
+        <item>1987</item>
+        <item>1986</item>
+        <item>1985</item>
+        <item>1984</item>
+        <item>1983</item>
+        <item>1982</item>
+        <item>1981</item>
+        <item>1980</item>
+        <item>1979</item>
+        <item>1978</item>
+        <item>1977</item>
+        <item>1976</item>
+        <item>1975</item>
+        <item>1974</item>
+        <item>1973</item>
+        <item>1972</item>
+        <item>1971</item>
+        <item>1970</item>
+        <item>1969</item>
+        <item>1968</item>
+        <item>1967</item>
+        <item>1966</item>
+        <item>1965</item>
+        <item>1964</item>
+        <item>1963</item>
+        <item>1962</item>
+        <item>1961</item>
+        <item>1960</item>
+        <item>1959</item>
+        <item>1958</item>
+        <item>1957</item>
+        <item>1956</item>
+        <item>1955</item>
+        <item>1954</item>
+        <item>1953</item>
+        <item>1952</item>
+        <item>1951</item>
+        <item>1950</item>
+        <item>1949</item>
+        <item>1948</item>
+        <item>1947</item>
+        <item>1946</item>
+        <item>1945</item>
+        <item>1944</item>
+        <item>1943</item>
+        <item>1942</item>
+        <item>1941</item>
+        <item>1940</item>
+        <item>1949</item>
+        <item>1948</item>
+        <item>1947</item>
+        <item>1946</item>
+        <item>1945</item>
+        <item>1944</item>
+        <item>1943</item>
+        <item>1942</item>
+        <item>1941</item>
+        <item>1940</item>
+    </string-array>
+
+</resources>

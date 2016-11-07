@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Specialisation"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:background="@color/newLightGray"
+                android:textColor="@color/lightBlack"/>
+
+            <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                android:id="@+id/grdEditPrflSpeclizations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplAddEditPrflSpeclizations"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/add_more"
+                    android:scaleType="fitXY"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Services"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/lightBlack"
+                android:background="@color/newLightGray"
+                android:layout_marginTop="15dp"/>
+
+            <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                android:id="@+id/grdEditPrflServcs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <com.indglobal.shedoctor.Commans.RippleView
+                android:id="@+id/rplAddEditPrflServcs"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                ripple:rv_centered="true"
+                ripple:rv_color="@color/colorPrimary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/add_more"
+                    android:scaleType="fitXY"/>
+
+            </com.indglobal.shedoctor.Commans.RippleView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

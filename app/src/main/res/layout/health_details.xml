@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvHealthDtlTolbrTitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="4 Home remedies to..."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"
+        android:layout_below="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="2dp">
+
+         <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+             android:layout_margin="15dp">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvHealthDtlTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Home remedies to keep your teeth \n strong and sprakling"
+                android:textSize="14sp"
+                android:textColor="@color/lightBlack"/>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginRight="10dp">
+
+                 <com.indglobal.shedoctor.Fonts.GouthamLightText
+                     android:id="@+id/tvHealthDtlPost"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Posted on mar 12,2016"
+                     android:textSize="10dp"
+                     android:textColor="@color/fullGray"
+                     android:layout_centerVertical="true"/>
+
+
+                 <com.indglobal.shedoctor.Commans.RippleView
+                     android:id="@+id/rplHealthDtlEdit"
+                     android:layout_width="35dp"
+                     android:layout_height="35dp"
+                     android:gravity="center"
+                     app:rv_color="@color/colorPrimary"
+                     app:rv_centered="true"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true">
+
+                 <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:src="@drawable/edit"
+                     android:padding="8dp"/>
+
+                 </com.indglobal.shedoctor.Commans.RippleView>
+
+             </RelativeLayout>
+
+             <ImageView
+                 android:id="@+id/ivHealthDtlImg"
+                 android:layout_width="match_parent"
+                 android:layout_height="170dp"
+                 android:layout_marginTop="15dp"
+                 android:scaleType="fitXY"/>
+
+             <com.indglobal.shedoctor.Fonts.GouthamBookText
+                 android:id="@+id/tvHealthDtlContent"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="15dp"
+                 android:textSize="12sp"
+                 android:textColor="@color/fullGray"/>
+
+          </LinearLayout>
+     </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

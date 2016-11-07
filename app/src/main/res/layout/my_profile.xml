@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvmppreview"
+                android:text="Preview"
+                android:textSize="8sp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_bottom_shadow"/>
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/diagtitle"
+            android:background="@color/lightGray">
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textColor="@color/lightBlack"
+                android:text="Basic Info"
+                android:textSize="13sp"/>
+
+            <com.indglobal.shedoctor.Fonts.GouthamBookText
+                android:id="@+id/tvMyPrflEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Edit Profile"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/lightblue"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp">
+
+                    <com.indglobal.shedoctor.Commans.RoundedImage.RoundedImageView
+                        android:id="@+id/ivMyPrflImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        ripple:riv_oval="true"
+                        ripple:riv_border_width="1dip"
+                        ripple:riv_border_color="@color/lightGray"
+                        ripple:riv_mutate_background="true"
+                        android:layout_marginLeft="15dp" />
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/ivMyPrflImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp">
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMyPrflName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dr.Sanjiveeni Rao"
+                            android:textSize="14sp"
+                            android:textColor="@color/lightBlack"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMyPrflDegree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="MBBS MD in Dentist"
+                            android:textSize="12sp"
+                            android:textColor="@color/fullGray"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMyPrflClg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="875674 Tamilnadu Medical Council,2004"
+                            android:singleLine="true"
+                            android:textColor="@color/fullGray"
+                            android:textSize="12dp"/>
+
+                        <com.indglobal.shedoctor.Fonts.GouthamBookText
+                            android:id="@+id/tvMyPrflExp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 yrs Experience"
+                            android:singleLine="true"
+                            android:textColor="@color/fullGray"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Language:- "
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMyPrflLang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telgu,Hindi,Marathi,English"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mother Tongue:- "
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMyPrflMothrTong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telgu"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine Type:- "
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMyPrflMedicineType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Homeopathy"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Specialty:- "
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMyPrflSpecType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Homeopathy"
+                        android:textSize="12sp"
+                        android:textColor="@color/fullGray"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address:- "
+                        android:textSize="13sp"
+                        android:textColor="@color/lightBlack"/>
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvMyPrflCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bengaluru-560021,Karnataka,India"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/fullGray"/>
+
+                </LinearLayout>
+
+                <com.indglobal.shedoctor.Fonts.GouthamBookText
+                    android:id="@+id/tvMyPrflAbt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="changing your toothbrush is vital your oral hygiene in a good condition. tooth- in keeping changing your toothbrush is vital your oral"
+                    android:textSize="13sp"
+                    android:padding="10dp"
+                    android:textColor="@color/fullGray"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/lightBlack"
+                        android:text="Education"
+                        android:textSize="13sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvEduNotAvlbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Not Available"
+                        android:singleLine="true"
+                        android:textColor="@color/fullGray"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+
+                    <ListView
+                        android:id="@+id/lstMyPrflEductn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/lightBlack"
+                        android:text="Specializations"
+                        android:textSize="13sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvSpecNotAvlbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Not Available"
+                        android:singleLine="true"
+                        android:textColor="@color/fullGray"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+
+                    <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                        android:id="@+id/grdMyPrflSpeclt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="8dp"
+                        android:verticalSpacing="5dp"
+                        android:numColumns="2"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/lightBlack"
+                        android:text="Services"
+                        android:textSize="13sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvServcNotAvlbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Not Available"
+                        android:singleLine="true"
+                        android:textColor="@color/fullGray"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+
+                    <com.indglobal.shedoctor.Commans.ExpandableHeightGridView
+                        android:id="@+id/grdMyPrflServce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="8dp"
+                        android:verticalSpacing="5dp"
+                        android:numColumns="2"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/lightGray">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/lightBlack"
+                        android:text="Awards"
+                        android:textSize="13sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <com.indglobal.shedoctor.Fonts.GouthamBookText
+                        android:id="@+id/tvAwardsNotAvlbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Not Available"
+                        android:singleLine="true"
+                        android:textColor="@color/fullGray"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+
+                    <ListView
+                        android:id="@+id/lstMyPrflAward"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bar"/>
+
+</RelativeLayout>

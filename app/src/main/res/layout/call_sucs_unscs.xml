@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.indglobal.shedoctr.activities.Successful_msg">
+
+    <LinearLayout
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:id="@+id/tvsuccessful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank You!"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/lightBlack"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <com.indglobal.shedoctor.Fonts.RadioGoutam
+                android:id="@+id/rdsuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Successful"
+                android:textSize="14sp"
+                android:checked="true"
+                android:theme="@style/MyRadioButton"
+                android:textColor="@color/radio_color_selector"/>
+
+            <com.indglobal.shedoctor.Fonts.RadioGoutam
+                android:id="@+id/rdunsuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unsuccessful"
+                android:textSize="14sp"
+                android:theme="@style/MyRadioButton"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/radio_color_selector"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llsuccessful"
+        android:layout_below="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginBottom="80dp">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your video call had successfully completed"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/lightBlack"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scs_large"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llmain"
+        android:id="@+id/llunsuccessful"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unscs_lrge"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the reason for your unsuccessful \n call,will help us to improve our service"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="11sp"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rect_whitfill_stroke">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/down"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Spinner
+                android:id="@+id/spinBankName"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookEdit
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp"
+            android:hint="Write exact reason"
+            android:padding="10dp"
+            android:gravity="start"
+            android:background="@color/newLightGray"
+            android:textSize="12sp"
+            android:textColor="@color/lightBlack"
+            android:textCursorDrawable="@drawable/indicator_black"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true">
+
+        <com.indglobal.shedoctor.Fonts.GouthamBookText
+            android:id="@+id/tvsubmit"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:background="@drawable/rect_submit_fill"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
